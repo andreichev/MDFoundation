@@ -1,11 +1,9 @@
 //
-//  Grid.swift
+//  ExtensionSizeOffset.swift
 //  MDFoundation
 //
-//  Created by Anton on 18/01/2019.
+//  Created by Михаил Андреичев on 07.01.2020.
 //
-
-import UIKit
 
 public extension CGSize {
     /// Инициализирует струтуру с идентичными размерами по высоте и ширине, равными входящему параметру
