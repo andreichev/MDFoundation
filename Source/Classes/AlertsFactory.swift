@@ -1,7 +1,7 @@
 //
 //  AlertsFactory.swift
 //  MDFoundation
-//
+// 
 //  Created by Михаил Андреичев on 28.11.2019.
 //
 
