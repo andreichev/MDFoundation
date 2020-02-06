@@ -13,14 +13,14 @@ Pod::Spec.new do |s|
   DESC
 
   s.license = { :type => 'Custom', :text => <<-LICENSE
-                  Copyright 2019
+                  Copyright 2020
                   Permission is granted to MD
                   LICENSE
                }
 
   s.author = { "Andreichev Michael" => "andreichev.m@mail.ru" }
-  s.homepage     = "https://github.com/NGDev1/iosPods/foundation"
-  s.source = { :git => "https://github.com/NGDev1/iosPods/foundation", :tag => "#{s.version}" }
+  s.homepage     = "https://github.com/NGdev1/MDFoundation"
+  s.source = { :git => "https://github.com/NGdev1/MDFoundation", :tag => "#{s.version}" }
 
   s.subspec 'Source' do |ss|
     ss.source_files = ["Source/**/*.swift"]
