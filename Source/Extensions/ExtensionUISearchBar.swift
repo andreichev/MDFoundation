@@ -30,6 +30,6 @@ public extension UISearchBar {
 public extension UISearchBar {
     /// Clear text.
     func clear() {
-        text = ""
+        text = .empty
     }
 }

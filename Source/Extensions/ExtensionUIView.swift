@@ -8,49 +8,7 @@
 import SnapKit
 
 public extension UIView {
-    @objc
-    func setRadius(radius: CGFloat) {
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale
-        layer.cornerRadius = radius
-        layer.masksToBounds = true
-    }
-
-    func makeRoundWithBorder(radius: CGFloat, corners: UIRectCorner, backgroundColor: CGColor) {
-        let rect = CGRect(origin: .zero, size: bounds.size)
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(
-            roundedRect: rect,
-            byRoundingCorners: corners,
-            cornerRadii: CGSize(width: radius, height: radius)
-        ).cgPath
-        maskLayer.frame = rect
-        maskLayer.strokeColor = backgroundColor
-        maskLayer.fillColor = backgroundColor
-        layer.masksToBounds = true
-        layer.mask = maskLayer
-    }
-
-    func makeRoundWithBorder(radius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) {
-        let bounds = CGRect(x: 0, y: 0, width: radius, height: radius)
-        let maskLayer = CAShapeLayer()
-        maskLayer.frame = bounds
-        maskLayer.path = UIBezierPath(
-            roundedRect: bounds,
-            byRoundingCorners: [.topRight, .topLeft, .bottomRight, .bottomLeft],
-            cornerRadii: CGSize(width: radius, height: radius)
-        ).cgPath
-        layer.mask = maskLayer
-
-        let borderLayer = CAShapeLayer()
-        borderLayer.path = maskLayer.path
-        borderLayer.fillColor = UIColor.clear.cgColor
-        borderLayer.strokeColor = borderColor.cgColor
-        borderLayer.lineWidth = borderWidth
-        borderLayer.frame = bounds
-        layer.addSublayer(borderLayer)
-    }
-
+ 
     /// Данный метод добавляет возможность трясти вьюху.
     ///
     func shake(completion: (() -> Void)? = nil) {
@@ -72,16 +30,6 @@ public extension UIView {
         CATransaction.commit()
     }
 
-    /// Метод для получения снапшота
-    func snapshotImage() -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0)
-        defer { UIGraphicsEndImageContext() }
-        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0)
-        drawHierarchy(in: bounds, afterScreenUpdates: true)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        return image
-    }
-
     func makeEdgesEqualToSuperview(inset: UIEdgeInsets = .zero) {
         snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(inset)
@@ -99,8 +47,6 @@ public extension UIView {
                 layer.borderColor = nil
                 return
             }
-            // Fix React-Native conflict issue
-            guard String(describing: type(of: color)) != "__NSCFType" else { return }
             layer.borderColor = color.cgColor
         }
     }
@@ -122,7 +68,7 @@ public extension UIView {
         }
         set {
             layer.masksToBounds = true
-            layer.cornerRadius = abs(CGFloat(Int(newValue * 100)) / 100)
+            layer.cornerRadius = newValue
         }
     }
 
@@ -201,37 +147,17 @@ public extension UIView {
     ///   - radius: shadow radius (default is 3).
     ///   - offset: shadow offset (default is .zero).
     ///   - opacity: shadow opacity (default is 0.5).
-    func addShadow(ofColor color: UIColor = UIColor(red: 0.07, green: 0.47, blue: 0.57, alpha: 1.0), radius: CGFloat = 3, offset: CGSize = .zero, opacity: Float = 0.5) {
+    func addShadow(
+        ofColor color: UIColor = UIColor(red: 0.07, green: 0.47, blue: 0.57, alpha: 1.0), 
+        radius: CGFloat = 3,
+        offset: CGSize = .zero, 
+        opacity: Float = 0.5
+    ) {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = offset
         layer.shadowRadius = radius
         layer.shadowOpacity = opacity
         layer.masksToBounds = false
-    }
-
-    func setShadow(radius: CGFloat) {
-        let radius: CGFloat = frame.width / 2.0
-        let width: CGFloat = 2.1 * radius
-        let rect = CGRect(x: 0, y: 0, width: width, height: frame.height)
-        let shadowPath = UIBezierPath(rect: rect)
-        layer.cornerRadius = 2
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0.5, height: 0.4)
-        layer.shadowOpacity = 0.5
-        layer.shadowRadius = 5.0
-        layer.masksToBounds = false
-        layer.shadowPath = shadowPath.cgPath
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale
-    }
-
-    func setShadow(opaсity: CGFloat, radius: CGFloat) {
-        let shadowPath = UIBezierPath(rect: bounds)
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = Float(opaсity)
-        layer.shadowRadius = radius
-        layer.shadowPath = shadowPath.cgPath
     }
 
     /// Fade in view.

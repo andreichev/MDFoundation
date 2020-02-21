@@ -41,15 +41,6 @@ public extension UIEdgeInsets {
         self.init(top: size.height, left: size.width, bottom: size.height, right: size.width)
     }
 
-    /// Умножает все элементы структуры на множитель
-    ///
-    /// - Parameters:
-    ///   - by: множитель
-    /// - Returns: результат умножения всех элементов на множитель
-    func multiplied(by: CGFloat) -> UIEdgeInsets {
-        return UIEdgeInsets(top: top * by, left: left * by, bottom: bottom * by, right: right * by)
-    }
-
     /// Инициализирует структуру с заданными вертикальными и горизонтальными отступами
     init(vertical: CGFloat = 0, horizontal: CGFloat = 0) {
         self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)

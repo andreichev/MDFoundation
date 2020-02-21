@@ -6,11 +6,6 @@
 //
 
 public extension String {
-    var containsOnlyPhoneSymbols: Bool {
-        let phoneNumberSet = CharacterSet(charactersIn: "()+*01234567890- ")
-        let nonDigitalCharacter = first { CharacterSet(charactersIn: String($0)).isSubset(of: phoneNumberSet.inverted) }
-        return nonDigitalCharacter == nil
-    }
 
     ///  usage:
     ///      func textField(
@@ -47,7 +42,7 @@ public extension String {
      :returns: Stripped string
      */
     func trimmed() -> String {
-        return trimmedLeft().trimmedRight()
+        return trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     /**
@@ -67,29 +62,5 @@ public extension String {
 
     func onlyDigits() -> String {
         return String(UnicodeScalarView(unicodeScalars.filter { NSCharacterSet.decimalDigits.contains($0) }))
-    }
-
-    /**
-     Strips the specified characters from the beginning of self.
-     :returns: Stripped string
-     */
-    func trimmedLeft(characterSet set: CharacterSet = CharacterSet.whitespacesAndNewlines) -> String {
-        if let range = rangeOfCharacter(from: set.inverted) {
-            return String(self[range.lowerBound ..< endIndex])
-        }
-
-        return ""
-    }
-
-    /**
-     Strips the specified characters from the end of self.
-     :returns: Stripped string
-     */
-    func trimmedRight(characterSet set: CharacterSet = CharacterSet.whitespacesAndNewlines) -> String {
-        if let range = rangeOfCharacter(from: set.inverted, options: NSString.CompareOptions.backwards) {
-            return String(self[startIndex ..< range.upperBound])
-        }
-
-        return ""
     }
 }

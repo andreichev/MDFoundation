@@ -6,7 +6,8 @@
 //
 
 open class AlertsFactory {
-    public static func error(
+
+    public static func plain(
         title: String,
         message: String,
         cancelText: String
