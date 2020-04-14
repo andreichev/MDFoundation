@@ -28,6 +28,7 @@ open class AlertsFactory {
     static func acceptAction(
         alertTitle: String,
         acceptTitle: String,
+        cancelText: String,
         acceptStyle: UIAlertAction.Style,
         acceptHandler: @escaping ((UIAlertAction) -> Void)
     ) -> UIAlertController {
@@ -42,7 +43,7 @@ open class AlertsFactory {
             handler: acceptHandler
         )
         let cancelAction = UIAlertAction(
-            title: Text.Common.cancel,
+            title: cancelText,
             style: UIAlertAction.Style.cancel
         )
 
