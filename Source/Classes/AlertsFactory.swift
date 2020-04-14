@@ -25,7 +25,7 @@ open class AlertsFactory {
         return alert
     }
 
-    static func acceptAction(
+    public static func acceptAction(
         alertTitle: String,
         acceptTitle: String,
         cancelText: String,
