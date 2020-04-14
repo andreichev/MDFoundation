@@ -25,6 +25,32 @@ open class AlertsFactory {
         return alert
     }
 
+    static func acceptAction(
+        alertTitle: String,
+        acceptTitle: String,
+        acceptStyle: UIAlertAction.Style,
+        acceptHandler: @escaping ((UIAlertAction) -> Void)
+    ) -> UIAlertController {
+        let alert: UIAlertController = UIAlertController(
+            title: alertTitle,
+            message: nil,
+            preferredStyle: UIAlertController.Style.actionSheet
+        )
+        let acceptAction = UIAlertAction(
+            title: acceptTitle,
+            style: acceptStyle,
+            handler: acceptHandler
+        )
+        let cancelAction = UIAlertAction(
+            title: Text.Common.cancel,
+            style: UIAlertAction.Style.cancel
+        )
+
+        alert.addAction(acceptAction)
+        alert.addAction(cancelAction)
+        return alert
+    }
+
     public static func accessDeniedWithSettingsLink(
         title: String,
         message: String,
