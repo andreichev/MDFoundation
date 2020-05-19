@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "MDFoundation"
-  s.version = "1.0.7"
+  s.version = "1.0.8"
   s.summary = "Библиотека полезных классов для ios-приложений"
 
   s.platform = :ios, "10.0"

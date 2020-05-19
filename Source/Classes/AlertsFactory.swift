@@ -35,7 +35,7 @@ open class AlertsFactory {
         let alert: UIAlertController = UIAlertController(
             title: alertTitle,
             message: nil,
-            preferredStyle: UIAlertController.Style.actionSheet
+            preferredStyle: UIAlertController.Style.alert
         )
         let acceptAction = UIAlertAction(
             title: acceptTitle,
