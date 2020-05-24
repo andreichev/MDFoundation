@@ -26,6 +26,7 @@ open class AlertsFactory {
     }
 
     public static func acceptAction(
+        alertStyle: UIAlertController.Style,
         alertTitle: String,
         acceptTitle: String,
         cancelText: String,
@@ -35,7 +36,7 @@ open class AlertsFactory {
         let alert: UIAlertController = UIAlertController(
             title: alertTitle,
             message: nil,
-            preferredStyle: UIAlertController.Style.alert
+            preferredStyle: alertStyle
         )
         let acceptAction = UIAlertAction(
             title: acceptTitle,
