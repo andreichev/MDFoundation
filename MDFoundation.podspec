@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "MDFoundation"
-  s.version = "1.0.9"
+  s.version = "1.1.0"
   s.summary = "Библиотека полезных классов для ios-приложений"
 
   s.platform = :ios, "10.0"
@@ -25,7 +25,5 @@ Pod::Spec.new do |s|
   s.subspec 'Source' do |ss|
     ss.source_files = ["Source/**/*.swift"]
   end
-  
-  s.dependency 'SnapKit', '~> 5.0.0'
 
 end

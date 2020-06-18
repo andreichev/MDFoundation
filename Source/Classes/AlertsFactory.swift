@@ -5,11 +5,14 @@
 //  Created by Михаил Андреичев on 28.11.2019.
 //
 
+import UIKit
+
 open class AlertsFactory {
 
     public static func plain(
         title: String,
         message: String,
+        tintColor: UIColor,
         cancelText: String
     ) -> UIAlertController {
         let alert: UIAlertController = UIAlertController(
@@ -22,6 +25,7 @@ open class AlertsFactory {
             style: UIAlertAction.Style.cancel
         )
         alert.addAction(cancelAction)
+        alert.view.tintColor = tintColor
         return alert
     }
 
@@ -31,6 +35,7 @@ open class AlertsFactory {
         acceptTitle: String,
         cancelText: String,
         acceptStyle: UIAlertAction.Style,
+        tintColor: UIColor,
         acceptHandler: @escaping ((UIAlertAction) -> Void)
     ) -> UIAlertController {
         let alert: UIAlertController = UIAlertController(
@@ -50,6 +55,7 @@ open class AlertsFactory {
 
         alert.addAction(acceptAction)
         alert.addAction(cancelAction)
+        alert.view.tintColor = tintColor
         return alert
     }
 
@@ -57,6 +63,7 @@ open class AlertsFactory {
         title: String,
         message: String,
         openSettingsText: String,
+        tintColor: UIColor,
         cancelText: String
     ) -> UIAlertController {
         let alert = UIAlertController(
@@ -74,6 +81,7 @@ open class AlertsFactory {
             style: UIAlertAction.Style.default,
             handler: nil
         ))
+        alert.view.tintColor = tintColor
         return alert
     }
 

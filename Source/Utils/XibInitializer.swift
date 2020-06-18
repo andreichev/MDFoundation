@@ -5,6 +5,8 @@
 //  Created by Михаил Андреичев on 06.12.2019.
 //
 
+import UIKit
+
 public class XibInitializer {
     /// Init from bundle to owner. Bundle base on type
     public static func initXib<T: NSObject>(_ xibName: String? = nil, owner: T) -> UIView {

@@ -5,7 +5,7 @@
 //  Copyright © 2019 Itis. All rights reserved.
 //
 
-import SnapKit
+import UIKit
 
 public extension UIView {
  
@@ -31,9 +31,21 @@ public extension UIView {
     }
 
     func makeEdgesEqualToSuperview(inset: UIEdgeInsets = .zero) {
-        snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(inset)
+        guard let superview = superview else {
+            fatalError("View must have superview")
         }
+        topAnchor.constraint(
+            equalTo: superview.topAnchor, constant: inset.top
+        ).isActive = true
+        bottomAnchor.constraint(
+            equalTo: superview.bottomAnchor, constant: inset.bottom
+        ).isActive = true
+        leadingAnchor.constraint(
+            equalTo: superview.leadingAnchor, constant: inset.left
+        ).isActive = true
+        trailingAnchor.constraint(
+            equalTo: superview.trailingAnchor, constant: inset.right
+        ).isActive = true
     }
 
     /// Border color of view; also inspectable from Storyboard.
