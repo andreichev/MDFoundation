@@ -34,6 +34,7 @@ public extension UIView {
         guard let superview = superview else {
             fatalError("View must have superview")
         }
+        translatesAutoresizingMaskIntoConstraints = false
         topAnchor.constraint(
             equalTo: superview.topAnchor, constant: inset.top
         ).isActive = true
