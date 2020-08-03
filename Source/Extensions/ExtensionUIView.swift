@@ -45,7 +45,7 @@ public extension UIView {
             equalTo: superview.leadingAnchor, constant: inset.left
         ).isActive = true
         trailingAnchor.constraint(
-            equalTo: superview.trailingAnchor, constant: inset.right
+            equalTo: superview.trailingAnchor, constant: -inset.right
         ).isActive = true
     }
 
