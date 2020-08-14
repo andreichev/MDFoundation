@@ -19,6 +19,9 @@
 ///        }
 ///    }
 /// }
+
+import Foundation
+
 public protocol ValidationType {
     var regularExpression: String { get }
 }

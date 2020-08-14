@@ -5,6 +5,8 @@
 //  Created by Михаил Андреичев on 25.11.2019.
 //
 
+import Foundation
+
 public extension String {
 
     ///  usage:
