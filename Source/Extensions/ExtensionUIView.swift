@@ -39,7 +39,7 @@ public extension UIView {
             equalTo: superview.topAnchor, constant: inset.top
         ).isActive = true
         bottomAnchor.constraint(
-            equalTo: superview.bottomAnchor, constant: inset.bottom
+            equalTo: superview.bottomAnchor, constant: -inset.bottom
         ).isActive = true
         leadingAnchor.constraint(
             equalTo: superview.leadingAnchor, constant: inset.left
