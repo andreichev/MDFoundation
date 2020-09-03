@@ -8,7 +8,6 @@
 import UIKit
 
 open class AlertsFactory {
-
     public static func plain(
         title: String,
         message: String,

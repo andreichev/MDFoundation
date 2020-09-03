@@ -8,7 +8,6 @@
 import Foundation
 
 public extension String {
-
     ///  usage:
     ///      func textField(
     ///      _ textField: UITextField,

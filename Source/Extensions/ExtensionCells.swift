@@ -16,6 +16,10 @@ extension UITableViewCell {
     public static var nib: UINib {
         UINib(nibName: identifier, bundle: Bundle(for: self))
     }
+
+    public static func nib(bundle: Bundle) -> UINib {
+        UINib(nibName: identifier, bundle: bundle)
+    }
 }
 
 extension UICollectionViewCell {
