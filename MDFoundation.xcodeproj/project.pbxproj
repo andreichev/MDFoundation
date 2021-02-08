@@ -53,6 +53,7 @@
 		6B88244724E70D1B00B2005B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6B88245624E70F4600B2005B /* MDFoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = MDFoundation.podspec; sourceTree = "<group>"; };
 		6B88245724E70F4700B2005B /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		6B9F22A225D1D9EB00193FCA /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 		6B36C9D924E6FE6F00DAE8B4 = {
 			isa = PBXGroup;
 			children = (
+				6B9F22A225D1D9EB00193FCA /* Package.swift */,
 				6B88245624E70F4600B2005B /* MDFoundation.podspec */,
 				6B88245724E70F4700B2005B /* Readme.md */,
 				6B36C9E424E6FE6F00DAE8B4 /* Source */,

@@ -61,6 +61,10 @@ playground.xcworkspace
 *.xcuserstate
 .DS_Store
 
+# SPM
+.swiftpm
+Package.resolved
+
 *.generated.swift
 .env
 swiftlint.result.json
