@@ -13,14 +13,15 @@
 		6B88244B24E70D1B00B2005B /* ExtensionSizeOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88243C24E70D1B00B2005B /* ExtensionSizeOffset.swift */; };
 		6B88244C24E70D1B00B2005B /* ExtensionUINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88243D24E70D1B00B2005B /* ExtensionUINavigationBar.swift */; };
 		6B88244D24E70D1B00B2005B /* ExtensionUISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88243E24E70D1B00B2005B /* ExtensionUISearchBar.swift */; };
-		6B88244E24E70D1B00B2005B /* ExtensionUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88243F24E70D1B00B2005B /* ExtensionUINavigationController.swift */; };
 		6B88244F24E70D1B00B2005B /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88244024E70D1B00B2005B /* ExtensionUIView.swift */; };
 		6B88245024E70D1B00B2005B /* ExtensionCGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88244124E70D1B00B2005B /* ExtensionCGRect.swift */; };
 		6B88245124E70D1B00B2005B /* ExtensionUIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88244224E70D1B00B2005B /* ExtensionUIBarButtonItem.swift */; };
 		6B88245224E70D1B00B2005B /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88244324E70D1B00B2005B /* ExtensionString.swift */; };
-		6B88245324E70D1B00B2005B /* ExtensionCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88244424E70D1B00B2005B /* ExtensionCells.swift */; };
 		6B88245424E70D1B00B2005B /* XibInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88244624E70D1B00B2005B /* XibInitializer.swift */; };
 		6B88245524E70D1B00B2005B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88244724E70D1B00B2005B /* Utils.swift */; };
+		8495A49129DF5F2800E15B6E /* ExtensionUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495A48E29DF5F2700E15B6E /* ExtensionUITableView.swift */; };
+		8495A49229DF5F2800E15B6E /* ExtensionReusableIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495A48F29DF5F2700E15B6E /* ExtensionReusableIdentifiers.swift */; };
+		8495A49329DF5F2800E15B6E /* ExtensionUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495A49029DF5F2800E15B6E /* ExtensionUICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,17 +44,18 @@
 		6B88243C24E70D1B00B2005B /* ExtensionSizeOffset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionSizeOffset.swift; sourceTree = "<group>"; };
 		6B88243D24E70D1B00B2005B /* ExtensionUINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUINavigationBar.swift; sourceTree = "<group>"; };
 		6B88243E24E70D1B00B2005B /* ExtensionUISearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUISearchBar.swift; sourceTree = "<group>"; };
-		6B88243F24E70D1B00B2005B /* ExtensionUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUINavigationController.swift; sourceTree = "<group>"; };
 		6B88244024E70D1B00B2005B /* ExtensionUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		6B88244124E70D1B00B2005B /* ExtensionCGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCGRect.swift; sourceTree = "<group>"; };
 		6B88244224E70D1B00B2005B /* ExtensionUIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIBarButtonItem.swift; sourceTree = "<group>"; };
 		6B88244324E70D1B00B2005B /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
-		6B88244424E70D1B00B2005B /* ExtensionCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCells.swift; sourceTree = "<group>"; };
 		6B88244624E70D1B00B2005B /* XibInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibInitializer.swift; sourceTree = "<group>"; };
 		6B88244724E70D1B00B2005B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6B88245624E70F4600B2005B /* MDFoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = MDFoundation.podspec; sourceTree = "<group>"; };
 		6B88245724E70F4700B2005B /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		6B9F22A225D1D9EB00193FCA /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		8495A48E29DF5F2700E15B6E /* ExtensionUITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUITableView.swift; sourceTree = "<group>"; };
+		8495A48F29DF5F2700E15B6E /* ExtensionReusableIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionReusableIdentifiers.swift; sourceTree = "<group>"; };
+		8495A49029DF5F2800E15B6E /* ExtensionUICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,16 +110,17 @@
 		6B88243A24E70D1B00B2005B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8495A48F29DF5F2700E15B6E /* ExtensionReusableIdentifiers.swift */,
+				8495A49029DF5F2800E15B6E /* ExtensionUICollectionView.swift */,
+				8495A48E29DF5F2700E15B6E /* ExtensionUITableView.swift */,
 				6B88243B24E70D1B00B2005B /* ExtensionUIColor.swift */,
 				6B88243C24E70D1B00B2005B /* ExtensionSizeOffset.swift */,
 				6B88243D24E70D1B00B2005B /* ExtensionUINavigationBar.swift */,
 				6B88243E24E70D1B00B2005B /* ExtensionUISearchBar.swift */,
-				6B88243F24E70D1B00B2005B /* ExtensionUINavigationController.swift */,
 				6B88244024E70D1B00B2005B /* ExtensionUIView.swift */,
 				6B88244124E70D1B00B2005B /* ExtensionCGRect.swift */,
 				6B88244224E70D1B00B2005B /* ExtensionUIBarButtonItem.swift */,
 				6B88244324E70D1B00B2005B /* ExtensionString.swift */,
-				6B88244424E70D1B00B2005B /* ExtensionCells.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,14 +195,15 @@
 				6B88245124E70D1B00B2005B /* ExtensionUIBarButtonItem.swift in Sources */,
 				6B88244C24E70D1B00B2005B /* ExtensionUINavigationBar.swift in Sources */,
 				6B88244824E70D1B00B2005B /* StringValidator.swift in Sources */,
+				8495A49229DF5F2800E15B6E /* ExtensionReusableIdentifiers.swift in Sources */,
 				6B88245524E70D1B00B2005B /* Utils.swift in Sources */,
-				6B88245324E70D1B00B2005B /* ExtensionCells.swift in Sources */,
-				6B88244E24E70D1B00B2005B /* ExtensionUINavigationController.swift in Sources */,
 				6B88244A24E70D1B00B2005B /* ExtensionUIColor.swift in Sources */,
 				6B88244924E70D1B00B2005B /* AlertsFactory.swift in Sources */,
 				6B88244B24E70D1B00B2005B /* ExtensionSizeOffset.swift in Sources */,
 				6B88245224E70D1B00B2005B /* ExtensionString.swift in Sources */,
+				8495A49129DF5F2800E15B6E /* ExtensionUITableView.swift in Sources */,
 				6B88245424E70D1B00B2005B /* XibInitializer.swift in Sources */,
+				8495A49329DF5F2800E15B6E /* ExtensionUICollectionView.swift in Sources */,
 				6B88244F24E70D1B00B2005B /* ExtensionUIView.swift in Sources */,
 				6B88245024E70D1B00B2005B /* ExtensionCGRect.swift in Sources */,
 				6B88244D24E70D1B00B2005B /* ExtensionUISearchBar.swift in Sources */,

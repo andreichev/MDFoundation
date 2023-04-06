@@ -27,7 +27,7 @@ import PackageDescription
 
 let package = Package(
     name: "MDFoundation",
-    platforms: [.iOS(.v11)],
+    platforms: [.iOS(.v14)],
     products: [
         .library(name: "MDFoundation", targets: ["MDFoundation"]),
     ],

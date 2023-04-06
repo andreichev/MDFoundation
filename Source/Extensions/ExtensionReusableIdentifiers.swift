@@ -1,5 +1,5 @@
 //
-//  ReusableCells.swift
+//  ExtensionReusableIdentifiers.swift
 //  MD
 //
 //  Created by Михаил Андреичев on 22/09/2019.
@@ -22,7 +22,21 @@ extension UITableViewCell {
     }
 }
 
-extension UICollectionViewCell {
+extension UITableViewHeaderFooterView {
+    public static var identifier: String {
+        return Utils.getClassName(self)
+    }
+
+    public static var nib: UINib {
+        UINib(nibName: identifier, bundle: Bundle(for: self))
+    }
+
+    public static func nib(bundle: Bundle) -> UINib {
+        UINib(nibName: identifier, bundle: bundle)
+    }
+}
+
+extension UICollectionReusableView {
     public static var identifier: String {
         return Utils.getClassName(self)
     }
